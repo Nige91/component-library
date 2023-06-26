@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="reinstall" type="docker-deploy" factoryName="docker-image" singleton="false" server-name="docker">
+    <deployment type="docker-image">
+      <settings>
+        <option name="imageTag" value="node:18" />
+        <option name="attachToContainerNeeded" value="true" />
+        <option name="command" value="yarn install" />
+        <option name="containerName" value="" />
+        <option name="commandLineOptions" value="-v $PROJECT_DIR$/:/app -w /app --rm" />
+      </settings>
+    </deployment>
+    <method v="2">
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="uninstall" run_configuration_type="ShConfigurationType" />
+    </method>
+  </configuration>
+</component>

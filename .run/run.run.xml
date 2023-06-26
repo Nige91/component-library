@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="run" type="docker-deploy" factoryName="docker-image" server-name="docker">
+    <deployment type="docker-image">
+      <settings>
+        <option name="imageTag" value="node:18" />
+        <option name="command" value="yarn run dev" />
+        <option name="containerName" value="" />
+        <option name="commandLineOptions" value="-v $PROJECT_DIR$/:/app -w /app -p 8000:8000 --rm" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
