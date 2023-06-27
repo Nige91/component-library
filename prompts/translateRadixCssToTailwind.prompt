@@ -1,0 +1,41 @@
+Translate the following css to tailwind using the apply syntax.
+expressions like var(--violet11) describe colors which can be translated to violet-11 in this case.
+So "background-color: var(--violet4);" would for example translate to bg-violet-4
+Selectors based on data attributes can also be translated using these two rules:
+"[data-$x]" becomes "radix-$x:", "[data-state='$x']" becomes "radix-state-$x:" where $x can be any string.
+merge selectors that use data-attributes into the corresponding class by using the two rules above. Here is an example on how to do this:
+
+.MenubarTrigger[data-highlighted],
+.MenubarTrigger[data-state='open'] {
+  background-color: var(--violet4);
+}
+
+becomes
+
+.MenubarTrigger {
+    @apply radix-highlighted:bg-violet-4 radix-state-open:bg-violet-4
+}
+
+Here is the css to translate:
+
+.SelectItem {
+  font-size: 13px;
+  line-height: 1;
+  color: var(--violet11);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 0 35px 0 25px;
+  position: relative;
+  user-select: none;
+}
+.SelectItem[data-disabled] {
+  color: var(--mauve8);
+  pointer-events: none;
+}
+.SelectItem[data-highlighted] {
+  outline: none;
+  background-color: var(--violet9);
+  color: var(--violet1);
+}

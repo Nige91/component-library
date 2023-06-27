@@ -1,0 +1,8 @@
+Create a react Sidebar component that receives a list of items of the following type, use Typescript and Tailwind for the component.
+type SidebarItem = {
+    title: string;
+    onClick: () => void;
+};.
+When clicking on an item, it becomes selected and it executes the onClick.
+The items should have a dark text and show a faint rounded button when hovered over, the selected item should have a slightly less faint rounded button around it. Use the tailwind color named primary, which has tones from 50-950, for example bg-primary-500.
+
